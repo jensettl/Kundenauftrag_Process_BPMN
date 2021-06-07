@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" id="BestellkonditionenTest" name="BestellkonditionenTest" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="4.8.1">
+  <decision id="BestellkonditionenFestlegen" name="Bestellkonditionen festlegen">
+    <informationRequirement id="InformationRequirement_0heokdk">
+      <requiredDecision href="#Decision_1n7aw6q" />
+    </informationRequirement>
+    <decisionTable id="DecisionTable_1rzpbzx" hitPolicy="FIRST">
+      <input id="Input_1" label="Kundenstatus">
+        <inputExpression id="InputExpression_1" typeRef="string">
+          <text>status</text>
+        </inputExpression>
+        <inputValues id="UnaryTests_1ojzdrj">
+          <text>"Standard","VIP"</text>
+        </inputValues>
+      </input>
+      <output id="Output_1" label="Rabatt" name="rabatt" typeRef="string">
+        <outputValues id="UnaryTests_0fgq3rd">
+          <text>"0%","5%"</text>
+        </outputValues>
+      </output>
+      <rule id="DecisionRule_14eks88">
+        <inputEntry id="UnaryTests_1b5mnow">
+          <text>"Standard"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1jv7cq6">
+          <text>"0%"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_034wa22">
+        <inputEntry id="UnaryTests_0p09slu">
+          <text>"VIP"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0d60c8e">
+          <text>"5%"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0vnd2k8">
+        <inputEntry id="UnaryTests_052jvye">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0klj7s2">
+          <text>"0%"</text>
+        </outputEntry>
+      </rule>
+    </decisionTable>
+  </decision>
+  <decision id="Decision_1n7aw6q" name="Status bestimmen">
+    <decisionTable id="DecisionTable_19bll5u">
+      <input id="InputClause_0incflg" label="Bonität">
+        <inputExpression id="LiteralExpression_0p3p0pg" typeRef="integer">
+          <text>creditRating</text>
+        </inputExpression>
+      </input>
+      <output id="OutputClause_0nog9a1" label="Kundenstatus" name="status" typeRef="string" biodi:width="192">
+        <outputValues id="UnaryTests_1hvp345">
+          <text>"Standard","VIP"</text>
+        </outputValues>
+      </output>
+      <rule id="DecisionRule_0ykky5j">
+        <inputEntry id="UnaryTests_0sleyw1">
+          <text>&lt;= 1000</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1mq9zr4">
+          <text>"Standard"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_02a94fc">
+        <inputEntry id="UnaryTests_0r8yvsa">
+          <text>&gt; 1000</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0ssx91f">
+          <text>"VIP"</text>
+        </outputEntry>
+      </rule>
+    </decisionTable>
+  </decision>
+  <dmndi:DMNDI>
+    <dmndi:DMNDiagram>
+      <dmndi:DMNShape dmnElementRef="BestellkonditionenFestlegen">
+        <dc:Bounds height="80" width="180" x="160" y="100" />
+      </dmndi:DMNShape>
+      <dmndi:DMNEdge id="DMNEdge_0zkg3hv" dmnElementRef="InformationRequirement_0heokdk">
+        <di:waypoint x="360" y="260" />
+        <di:waypoint x="250" y="200" />
+        <di:waypoint x="250" y="180" />
+      </dmndi:DMNEdge>
+      <dmndi:DMNShape id="DMNShape_12uhlr2" dmnElementRef="Decision_1n7aw6q">
+        <dc:Bounds height="80" width="180" x="270" y="260" />
+      </dmndi:DMNShape>
+    </dmndi:DMNDiagram>
+  </dmndi:DMNDI>
+</definitions>

@@ -1,0 +1,48 @@
+<!--
+You can use this form through Camunda Tasklist
+by setting the formKey of a BPMN Start Event to:
+embedded:app:forms/Kundenauftrag.html
+-->
+
+<form name="customerOrder">
+     <div class="form-group">
+     	<label for="prename">Vorname </label>
+     	<input class="form-control"
+     		type="text"
+       		cam-variable-name="prename"
+       		cam-variable-type="String"
+       		name="prename"
+       		ng-minlength="1"
+       		ng-maxlength="50" />
+      </div>
+      <div class="form-group">
+     	<label for="surname">Nachname </label>
+     	<input class="form-control"
+     		type="text"
+       	  	cam-variable-name="surname"
+       		cam-variable-type="String"
+       		name="surname"
+       		ng-minlength="1"
+       		ng-maxlength="50" />
+       </div>
+      <div class="form-group">
+        <label for="birthDate">Geburtsdatum</label>
+     	<input type="date" value="">
+      </div>
+      
+	 <div class="form-group">
+	 	<label for="id">Produkt </label>
+	  		<select id="produkt"  cam-variable-name="produkt" cam-variable-type="String" cam-options="produkt" ng-model="produkt">
+	  			<option value="artikel1">artikel1</option>
+	 			<option value="artikel2">artikel2</option>
+	  		</select>
+	  </div>
+	  <div class="form-group">
+	 	<label for="id">Menge</label>
+	  	<input class="form-control"
+     		type="text"
+       	  	cam-variable-name="amount"
+       		cam-variable-type="String"
+       		name="amount"/>
+	 </div>
+</form>
