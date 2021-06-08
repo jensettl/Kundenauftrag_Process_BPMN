@@ -1,0 +1,92 @@
+{
+  "customers": [
+    {
+      "id": 1,
+      "prename": "Callie",
+      "surname": "Oliver",
+      "birthDate": "1955/03/03",
+      "creditRating": 7522,
+      "purchaseVolume": 0
+    },
+    {
+      "id": 2,
+      "prename": "Colleen",
+      "surname": "Alford",
+      "birthDate": "1985/01/08",
+      "creditRating": 2222,
+      "purchaseVolume": 1500
+    },
+    {
+      "id": 3,
+      "prename": "Keefe",
+      "surname": "Williams",
+      "birthDate": "1970/09/04",
+      "creditRating": 9000,
+      "purchaseVolume": 900
+    },
+    {
+      "id": 4,
+      "prename": "Elmo",
+      "surname": "Garza",
+      "birthDate": "1995/11/02",
+      "creditRating": 1,
+      "purchaseVolume": 500
+    },
+    {
+      "id": 5,
+      "prename": "Dennis",
+      "surname": "Holloway",
+      "birthDate": "1945/01/23",
+      "creditRating": 100,
+      "purchaseVolume": 0
+    },
+    {
+      "id": 6,
+      "prename": "Noel",
+      "surname": "Reyes",
+      "birthDate": "1991/06/21",
+      "creditRating": 1000,
+      "purchaseVolume": 0
+    },
+    {
+      "id": 7,
+      "prename": "Fatima",
+      "surname": "Diaz",
+      "birthDate": "1973/12/12",
+      "creditRating": 8002,
+      "purchaseVolume": 600
+    },
+    {
+      "id": 8,
+      "prename": "Hedley",
+      "surname": "Cotton",
+      "birthDate": "1951/01/07",
+      "creditRating": 10000,
+      "purchaseVolume": 87
+    },
+    {
+      "id": 9,
+      "prename": "Quin",
+      "surname": "Aguirre",
+      "birthDate": "1978/08/17",
+      "creditRating": 100,
+      "purchaseVolume": 0
+    },
+    {
+      "id": 10,
+      "prename": "Noel",
+      "surname": "Short",
+      "birthDate": "1979/10/23",
+      "creditRating": 1000,
+      "purchaseVolume": 1000
+    },
+    {
+      "surname": "Williams",
+      "prename": "Casie",
+      "purchaseVolume": 0,
+      "birthDate": "1970/09/04",
+      "creditRating": -1,
+      "id": 11
+    }
+  ]
+}
