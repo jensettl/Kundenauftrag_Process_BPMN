@@ -2,5 +2,4 @@ com\camunda\avg\KundenAuftrag\LoggerBestellungAblehnenDelegate.class
 com\camunda\avg\KundenAuftrag\GetKundeninformationenDelegate.class
 com\camunda\avg\KundenAuftrag\LoggerRechnungVerschickenDelegate.class
 com\camunda\avg\KundenAuftrag\CamundaBpmProcessApplication.class
-com\camunda\avg\KundenAuftrag\LoggerDelegate.class
 com\camunda\avg\KundenAuftrag\ProcessConstants.class
