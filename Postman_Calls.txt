@@ -1,0 +1,22 @@
+Start Process by Message: localhost:8080/engine-rest/message
+
+Body: 
+{
+  "messageName" : "KundenauftragMessage",
+  "businessKey" : "2",
+  "processVariables" : {
+    "prename" : {"value" : "Keefe", "type": "String"},
+    "surname" : {"value" : "Williams", "type": "String"},
+    "birthDate" : {"value" : "1970/09/04", "type" : "String"},
+    "vollständig" : {"value" : "null", "type": "Boolean"}
+  }
+}
+
+
+KundenStornierung by Message:
+
+Body
+{
+  "messageName": "KundenStornierungMessage",
+  "businessKey" : "2"
+}
